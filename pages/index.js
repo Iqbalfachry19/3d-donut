@@ -25,28 +25,32 @@ export default function Home({ scale = 40, position = [0, 0, 0] }) {
         }}
       >
         <ambientLight color={'white'} intensity={0.2} />
+        <Draggable>
+          <Light position={[0, 3, 0]} />
+          <Suspense fallback={null}>
+            <Text
+              color={'#EC2D2D'}
+              fontSize={0.2}
+              maxWidth={20}
+              lineHeight={1}
+              letterSpacing={0.02}
+              textAlign={'left'}
+              font="https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwK4vaqI.woff"
+              anchorX="center"
+              anchorY="middle"
+              position={[1.5, 2, 2]}
+            >
+              Muhammad Iqbal Fachry Krisbudiana
+            </Text>
+            <GltfModel
+              scale="20"
+              modelPath={'/Donut.glb'}
+              position={position}
+            />
 
-        <Light position={[0, 3, 0]} />
-        <Suspense fallback={null}>
-          <Text
-            color={'#EC2D2D'}
-            fontSize={0.2}
-            maxWidth={20}
-            lineHeight={1}
-            letterSpacing={0.02}
-            textAlign={'left'}
-            font="https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwK4vaqI.woff"
-            anchorX="center"
-            anchorY="middle"
-            position={[1.5, 2, 2]}
-          >
-            Muhammad Iqbal Fachry Krisbudiana
-          </Text>
-          <GltfModel scale="20" modelPath={'/Donut.glb'} position={position} />
-
-          <Box rotateX={3} rotateY={0.2} />
-        </Suspense>
-
+            <Box rotateX={3} rotateY={0.2} />
+          </Suspense>
+        </Draggable>
         <FirstPersonControls />
       </Canvas>
     </div>
