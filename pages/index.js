@@ -14,7 +14,7 @@ export default function Home({ scale = 40, position = [0, 0, 0] }) {
   return (
     <div className={css.scene}>
       <Head>
-        <title>tur lab RPL</title>
+        <title>3d donut</title>
       </Head>
       <Canvas
         shadows={true}
@@ -42,7 +42,7 @@ export default function Home({ scale = 40, position = [0, 0, 0] }) {
           >
             Muhammad Iqbal Fachry Krisbudiana
           </Text>
-          <GltfModel scale="2" modelPath={'/Donut.glb'} position={position} />
+          <GltfModel scale="20" modelPath={'/Donut.glb'} position={position} />
 
           <Box rotateX={3} rotateY={0.2} />
         </Suspense>
