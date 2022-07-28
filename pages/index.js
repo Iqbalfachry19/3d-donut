@@ -6,9 +6,13 @@ import Loader from '../components/Loader';
 import OrbitControls from '../components/OrbitControls';
 import { Environment, Text } from '@react-three/drei';
 import GltfModel from '../components/GltfModel';
+import Head from 'next/head';
 const index = () => {
   return (
     <div>
+      <Head>
+        <title>Wisata 3D</title>
+      </Head>
       <Header />
       <main className="  bg-blue-500 h-screen text-white">
         <div className="mx-auto max-w-6xl flex pt-20">

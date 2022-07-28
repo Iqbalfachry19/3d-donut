@@ -17,6 +17,9 @@ const Header = () => {
         <li className="text-white bg-blue-400 p-2 rounded-lg hover:cursor-pointer">
           SIGN UP
         </li>
+        <li className="text-white bg-yellow-400 p-2 rounded-lg hover:cursor-pointer">
+          UPLOAD
+        </li>
       </ul>
     </div>
   );
