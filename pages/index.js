@@ -11,11 +11,15 @@ import { Environment, Text } from '@react-three/drei';
 import Head from 'next/head';
 import FbxModel from '../components/FbxModel';
 import Loader from '../components/Loader';
+import ObjModel from '../components/ObjModel';
+import { DDSLoader } from 'three-stdlib';
+import * as THREE from 'three';
+THREE.DefaultLoadingManager.addHandler(/\.dds$/i, new DDSLoader());
 export default function Home({ scale = 40, position = [0, 0, 0] }) {
   return (
     <div className={css.scene}>
       <Head>
-        <title>3d donut</title>
+        <title>3D RPL ROOM</title>
       </Head>
       <Canvas
         shadows={true}
@@ -26,7 +30,7 @@ export default function Home({ scale = 40, position = [0, 0, 0] }) {
         }}
       >
         <Suspense fallback={<Loader />}>
-          <ambientLight color={'white'} intensity={0.2} />
+          <ambientLight color={'white'} intensity={0.6} />
           <Light position={[0, 3, 0]} />
           <Text
             color={'#EC2D2D'}
@@ -43,10 +47,11 @@ export default function Home({ scale = 40, position = [0, 0, 0] }) {
             Muhammad Iqbal Fachry Krisbudiana
           </Text>
 
-          <FbxModel
-            scale="0.02"
-            modelPath={'/room.fbx'}
-            position={[-11, 0, 5]}
+          <ObjModel
+            scale="2"
+            modelPath={'/room.obj'}
+            position={[-10, 0, 6]}
+            matPath={'/room.mtl'}
           />
 
           <Environment preset="sunset" background />
