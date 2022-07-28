@@ -4,7 +4,7 @@ function Loader() {
   const { progress } = useProgress();
   return (
     <Html className="bg-red-300 rounded-lg p-2" center>
-      {progress}% loaded
+      {progress.toFixed(0)}%
     </Html>
   );
 }
