@@ -41,7 +41,7 @@ const index = () => {
                 <ambientLight color={'white'} intensity={0.6} />
 
                 <GltfModel
-                  scale="10"
+                  scale="40"
                   modelPath={'/Donut.glb'}
                   position={[0, 0, 0]}
                 />
