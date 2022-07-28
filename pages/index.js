@@ -15,8 +15,8 @@ const index = () => {
           <div className="">
             <h1 className="text-5xl">The leading platform for 3D on the web</h1>
             <p className="text-xl my-10 ">
-              Manage your 3D assets. Distribute 3D & AR experiences. Collaborate
-              with others. Showcase your work. Buy & sell 3D models.
+              Manage your 3D assets. Distribute 3D. Collaborate with others.
+              Showcase your work. Buy & sell 3D models.
             </p>
             <div className="space-x-2">
               <button className="bg-blue-200 rounded-lg p-2">
