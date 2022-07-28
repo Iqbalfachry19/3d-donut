@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useLoader, useFrame } from '@react-three/fiber';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
-import { MTLLoader } from 'three/examples/jsm/loaders/mtlloader';
+import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 
 const ObjModel = ({ modelPath, matPath, scale = 1, position = [0, 0, 0] }) => {
   const materials = useLoader(MTLLoader, matPath);
