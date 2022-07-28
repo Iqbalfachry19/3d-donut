@@ -2,9 +2,6 @@ import React, { useRef, useState } from 'react';
 import { useLoader, useFrame } from '@react-three/fiber';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import { MTLLoader } from 'three/examples/jsm/loaders/mtlloader';
-import { DDSLoader } from 'three-stdlib';
-import * as THREE from 'three';
-THREE.DefaultLoadingManager.addHandler(/\.dds$/i, new DDSLoader());
 
 const ObjModel = ({ modelPath, matPath, scale = 1, position = [0, 0, 0] }) => {
   const materials = useLoader(MTLLoader, matPath);

@@ -14,6 +14,7 @@ function Controls(props) {
       lookVertical={false}
       constrainVertical={true}
       lookSpeed={0.02}
+      enabled={false}
       onClick={(e) => console.log('click')}
     />
   );

@@ -14,13 +14,16 @@ import Loader from '../components/Loader';
 import ObjModel from '../components/ObjModel';
 import { DDSLoader } from 'three-stdlib';
 import * as THREE from 'three';
+import Header from '../components/Header';
+import Content from '../components/Content';
 THREE.DefaultLoadingManager.addHandler(/\.dds$/i, new DDSLoader());
 export default function Home({ scale = 40, position = [0, 0, 0] }) {
   return (
     <div className={css.scene}>
       <Head>
-        <title>3D RPL ROOM</title>
+        <title>Wisata 3D</title>
       </Head>
+      <Header />
       <Canvas
         shadows={true}
         className={css.canvas}
@@ -44,7 +47,7 @@ export default function Home({ scale = 40, position = [0, 0, 0] }) {
             anchorY="middle"
             position={[1.5, 2, 2]}
           >
-            Muhammad Iqbal Fachry Krisbudiana
+            Tekan pada objek untuk melihat detail
           </Text>
 
           <ObjModel
@@ -59,6 +62,7 @@ export default function Home({ scale = 40, position = [0, 0, 0] }) {
 
         <FirstPersonControls />
       </Canvas>
+      <Content />
     </div>
   );
 }
