@@ -1,12 +1,24 @@
 import React from 'react';
 import { SearchIcon } from '@heroicons/react/outline';
+import { useRouter } from 'next/router';
 const Header = () => {
+  const router = useRouter();
   return (
     <div className="flex items-center justify-between bg-white py-2">
-      <h1 className="ml-4 cursor-pointer text-xl text-bold ">Wisata 3D</h1>
+      <h1
+        onClick={() => router.push(`/`)}
+        className="ml-4 cursor-pointer text-xl text-bold "
+      >
+        Wisata 3D
+      </h1>
       <div className="ml-4 cursor-pointer text-xl text-bold flex items-center border-2 p-2 rounded-lg">
         <SearchIcon className="h-6 w-6 text-gray-400" />
         <input
+          onKeyPress={(event) => {
+            if (event.key === 'Enter') {
+              router.push(`/search?q=${event.target.value}`);
+            }
+          }}
           className="outline-none"
           type="text"
           placeholder="Cari model 3D"
