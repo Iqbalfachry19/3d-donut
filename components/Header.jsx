@@ -1,7 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { SearchIcon } from '@heroicons/react/outline';
 import { useRouter } from 'next/router';
+import WrongNetworkMessage from './WrongNetwork';
 const Header = () => {
+  const [correctNetwork, setCorrectNetwork] = useState(false);
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+  const [currentAccount, setCurrentAccount] = useState('');
+  useEffect(() => {
+    connectWallet();
+  }, []);
+  const connectWallet = async () => {
+    try {
+      const { ethereum } = window;
+      if (!ethereum) {
+        console.log('Metamask not detected');
+        return;
+      }
+      let chainId = await ethereum.request({ method: 'eth_chainId' });
+      console.log('connected to chain:', chainId);
+      const rinkebyChainId = '0x4';
+      if (chainId !== rinkebyChainId) {
+        alert('you are not connected to the rinkeby testnet!');
+        setCorrectNetwork(false);
+        return;
+      } else {
+        setCorrectNetwork(true);
+      }
+      const accounts = await ethereum.request({
+        method: 'eth_requestAccounts',
+      });
+      console.log('Found account', accounts[0]);
+      setIsUserLoggedIn(true);
+      setCurrentAccount(accounts[0]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const router = useRouter();
   return (
     <div className="flex items-center justify-between bg-white py-2">
@@ -25,13 +59,25 @@ const Header = () => {
         />
       </div>
       <ul className="flex items-center space-x-2 mr-2">
-        <li className="text-blue-400 hover:cursor-pointer text-xl">Login</li>
-        <li className="text-white bg-blue-400 p-2 rounded-lg hover:cursor-pointer">
-          SIGN UP
-        </li>
-        <li className="text-white bg-yellow-400 p-2 rounded-lg hover:cursor-pointer">
-          UPLOAD
-        </li>
+        {!isUserLoggedIn ? (
+          <li
+            onClick={() => connectWallet()}
+            className="text-white bg-blue-400 p-2 rounded-lg hover:cursor-pointer"
+          >
+            Connect Wallet
+          </li>
+        ) : correctNetwork ? (
+          <>
+            <li>{`${currentAccount.slice(0, 7)}...${currentAccount.slice(
+              35,
+            )}`}</li>
+            <li className="text-white bg-yellow-400 p-2 rounded-lg hover:cursor-pointer">
+              UPLOAD
+            </li>
+          </>
+        ) : (
+          <WrongNetworkMessage />
+        )}
       </ul>
     </div>
   );

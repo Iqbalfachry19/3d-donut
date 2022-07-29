@@ -1,13 +1,10 @@
 import React from 'react';
 
-const Content = () => {
+const Content = ({ name, description }) => {
   return (
     <div>
-      <h1 className="ml-2 text-xl">Ruang Lab RPL</h1>
-      <p className="ml-2">
-        Ruang Lab RPL terdiri dari ruangan berisi komputer untuk tempat lab
-        mahasiswa
-      </p>
+      <h1 className="ml-2 text-xl">{name}</h1>
+      <p className="ml-2">{description}</p>
     </div>
   );
 };

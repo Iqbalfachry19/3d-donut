@@ -7,7 +7,12 @@ import OrbitControls from '../components/OrbitControls';
 import { Environment, Text } from '@react-three/drei';
 import GltfModel from '../components/GltfModel';
 import Head from 'next/head';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 const index = () => {
+  const router = useRouter();
+
   return (
     <div>
       <Head>
@@ -23,11 +28,17 @@ const index = () => {
               Showcase your work. Buy & sell 3D models.
             </p>
             <div className="space-x-2">
-              <button className="bg-blue-200 rounded-lg p-2">
-                Join For Free
+              <button
+                onClick={() => router.push('/3d-models/1')}
+                className="bg-blue-300 text-black rounded-lg p-2"
+              >
+                SEE EXAMPLES
               </button>
-              <button className="bg-yellow-200 rounded-lg p-2">
-                SEE PLANS
+              <button
+                onClick={() => router.push('/search?q=')}
+                className="bg-yellow-300 text-black rounded-lg p-2"
+              >
+                SEARCH 3D Models
               </button>
             </div>
           </div>
