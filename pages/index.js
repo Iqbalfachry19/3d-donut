@@ -10,7 +10,7 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-const index = () => {
+const Index = () => {
   const router = useRouter();
 
   return (
@@ -72,4 +72,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
