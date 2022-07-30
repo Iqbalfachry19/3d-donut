@@ -1,8 +1,8 @@
-# Blender 3.2.0 MTL File: 'room.blend'
-# www.blender.org
+# Blender MTL File: 'room.blend'
+# Material Count: 41
 
 newmtl 01_-_Default
-Ns 660.000061
+Ns 660.000004
 Ka 1.000000 1.000000 1.000000
 Kd 0.940238 0.940238 0.940238
 Ks 1.000000 1.000000 1.000000
@@ -22,7 +22,7 @@ d 1.000000
 illum 2
 
 newmtl Baseboard_material
-Ns 360.000000
+Ns 359.999993
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000
 Ks 0.500000 0.500000 0.500000
@@ -42,7 +42,7 @@ d 1.000000
 illum 2
 
 newmtl Blue_01
-Ns 30.245731
+Ns 30.245732
 Ka 1.000000 1.000000 1.000000
 Kd 0.119368 0.209507 0.673078
 Ks 0.108696 0.108696 0.108696
@@ -52,7 +52,7 @@ d 1.000000
 illum 2
 
 newmtl Blue_02
-Ns 9.569951
+Ns 9.569950
 Ka 1.000000 1.000000 1.000000
 Kd 0.017359 0.023821 0.063721
 Ks 0.163043 0.163043 0.163043
@@ -62,7 +62,7 @@ d 1.000000
 illum 2
 
 newmtl Ceiling_material
-Ns 360.000000
+Ns 359.999993
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000
 Ks 0.500000 0.500000 0.500000
@@ -92,7 +92,7 @@ d 1.000000
 illum 2
 
 newmtl DoorGlass_material
-Ns 360.000000
+Ns 359.999993
 Ka 1.000000 1.000000 1.000000
 Kd 0.333000 0.342000 0.900000
 Ks 0.500000 0.500000 0.500000
@@ -102,7 +102,7 @@ d 1.000000
 illum 2
 
 newmtl Door_material
-Ns 360.000000
+Ns 359.999993
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000
 Ks 0.500000 0.500000 0.500000
@@ -112,7 +112,7 @@ d 1.000000
 illum 2
 
 newmtl Edges
-Ns 55.375771
+Ns 55.375770
 Ka 1.000000 1.000000 1.000000
 Kd 0.184469 0.143747 0.135127
 Ks 0.114286 0.114286 0.114286
@@ -150,11 +150,11 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd Beige_Wall/beige_wall_001_diff_2k.jpg
-map_Ns Beige_Wall/beige_wall_001_rough_2k.jpg
+map_Kd Beige_Wall\\beige_wall_001_diff_2k.jpg
+map_Ns Beige_Wall\\beige_wall_001_rough_2k.jpg
 
 newmtl Glass
-Ns 360.000000
+Ns 359.999993
 Ka 1.000000 1.000000 1.000000
 Kd 0.333000 0.342000 0.900000
 Ks 0.500000 0.500000 0.500000
@@ -192,10 +192,10 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd Metal033_4K-JPG/Metal033_4K_Color.jpg
-map_Ns Metal033_4K-JPG/Metal033_4K_Roughness.jpg
-map_refl Metal033_4K-JPG/Metal033_4K_Roughness.jpg
-map_Bump -bm 1.000000 Metal033_4K-JPG/Metal033_4K_Normal.jpg
+map_Bump Metal033_4K-JPG\\Metal033_4K_Normal.jpg
+map_Kd Metal033_4K-JPG\\Metal033_4K_Color.jpg
+map_Ns Metal033_4K-JPG\\Metal033_4K_Roughness.jpg
+refl Metal033_4K-JPG\\Metal033_4K_Roughness.jpg
 
 newmtl Lense
 Ns 250.000000
@@ -278,7 +278,7 @@ d 1.000000
 illum 2
 
 newmtl Metal
-Ns 646.975403
+Ns 646.975428
 Ka 0.869565 0.869565 0.869565
 Kd 0.710555 0.710555 0.710555
 Ks 0.402174 0.402174 0.402174
@@ -287,8 +287,16 @@ Ni 1.450000
 d 1.000000
 illum 3
 
+newmtl None
+Ns 500
+Ka 0.8 0.8 0.8
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+
 newmtl PVC
-Ns 360.000000
+Ns 359.999993
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
 Ks 0.500000 0.500000 0.500000
@@ -298,7 +306,7 @@ d 1.000000
 illum 2
 
 newmtl Plast_black_01
-Ns 439.626709
+Ns 439.626721
 Ka 1.000000 1.000000 1.000000
 Kd 0.000000 0.000000 0.000000
 Ks 0.097826 0.097826 0.097826
@@ -308,7 +316,7 @@ d 1.000000
 illum 2
 
 newmtl Plast_black_02
-Ns 360.000000
+Ns 359.999993
 Ka 1.000000 1.000000 1.000000
 Kd 0.000000 0.000000 0.000000
 Ks 0.500000 0.500000 0.500000
@@ -318,7 +326,7 @@ d 1.000000
 illum 2
 
 newmtl Plastic
-Ns 360.000000
+Ns 359.999993
 Ka 1.000000 1.000000 1.000000
 Kd 0.000000 0.000000 0.000000
 Ks 0.500000 0.500000 0.500000
@@ -338,7 +346,7 @@ d 1.000000
 illum 2
 
 newmtl Plate
-Ns 94.336731
+Ns 94.336733
 Ka 1.000000 1.000000 1.000000
 Kd 0.035218 0.035218 0.035218
 Ks 0.045444 0.045444 0.045444
@@ -366,7 +374,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd CarpetTwistNatural001/REGULAR/3K/CarpetTwistNatural001_COL_3K.jpg
+map_Kd CarpetTwistNatural001\\REGULAR\\3K\\CarpetTwistNatural001_COL_3K.jpg
 
 newmtl Wood
 Ns 250.000000
@@ -377,11 +385,11 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd WoodFineDark004/REGULAR/3K/WoodFineDark004_3K_COL.jpg
-map_Bump -bm 1.000000 WoodFineDark004/REGULAR/3K/WoodFineDark004_3K_NRM.jpg
+map_Bump WoodFineDark004\\REGULAR\\3K\\WoodFineDark004_3K_NRM.jpg
+map_Kd WoodFineDark004\\REGULAR\\3K\\WoodFineDark004_3K_COL.jpg
 
 newmtl hidden_material
-Ns 360.000000
+Ns 359.999993
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
 Ks 0.500000 0.500000 0.500000
@@ -391,7 +399,7 @@ d 1.000000
 illum 2
 
 newmtl lampCaseMetal
-Ns 586.840332
+Ns 586.840336
 Ka 0.926605 0.926605 0.926605
 Kd 0.369414 0.369414 0.369414
 Ks 0.500000 0.500000 0.500000
