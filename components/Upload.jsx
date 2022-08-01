@@ -39,6 +39,8 @@ const Upload = ({ modalIsOpen, closeModal }) => {
         <input className="text-black" />
         <label className="text-white">Model Image Url</label>
         <input className="text-black" />
+        <label className="text-white">Model Url</label>
+        <input className="text-black" />
         <button onClick={(e) => upload(e)} className="bg-yellow-400 mt-2 p-2">
           Upload
         </button>
