@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { SearchIcon } from '@heroicons/react/outline';
 import { useRouter } from 'next/router';
 import WrongNetworkMessage from './WrongNetwork';
+import Upload from './Upload';
+
 const Header = () => {
   const [correctNetwork, setCorrectNetwork] = useState(false);
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
@@ -36,6 +38,17 @@ const Header = () => {
       console.log(error);
     }
   };
+
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   const router = useRouter();
   return (
     <div className="flex items-center justify-between bg-white py-2">
@@ -71,9 +84,13 @@ const Header = () => {
             <li>{`${currentAccount.slice(0, 7)}...${currentAccount.slice(
               35,
             )}`}</li>
-            <li className="text-white bg-yellow-400 p-2 rounded-lg hover:cursor-pointer">
+            <li
+              onClick={openModal}
+              className="text-white bg-yellow-400 p-2 rounded-lg hover:cursor-pointer"
+            >
               UPLOAD
             </li>
+            <Upload modalIsOpen={modalIsOpen} closeModal={closeModal} />
           </>
         ) : (
           <WrongNetworkMessage />

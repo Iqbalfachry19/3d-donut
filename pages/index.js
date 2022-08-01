@@ -10,6 +10,7 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Footer from '../components/Footer';
 const Index = () => {
   const router = useRouter();
 
@@ -67,7 +68,7 @@ const Index = () => {
           </div>
         </div>
       </main>
-      <footer></footer>
+      <Footer />
     </div>
   );
 };
