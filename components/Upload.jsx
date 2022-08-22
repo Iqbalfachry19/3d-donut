@@ -44,7 +44,7 @@ const Upload = ({ modalIsOpen, closeModal }) => {
     reader.onloadend = async () => {
       const buffer = Buffer.from(reader.result);
       console.log(buffer);
-      const ipfs = create({ url: 'https://ipfs.infura.io:5001/api/v0' });
+      const ipfs = create({ url: 'https://cloudflare-ipfs.com:5001/api/v0' });
       const result = await ipfs.add(buffer);
       console.log(result);
       setIsLoading(false);
@@ -54,7 +54,7 @@ const Upload = ({ modalIsOpen, closeModal }) => {
           `If you click "ok" you would be redirected . Cancel will load this website https://ipfs.infura.io/ipfs/${result.cid}?filename=${selectedImage.name}`,
         )
       ) {
-        window.location.href = `https://ipfs.infura.io/ipfs/${result.cid}?filename=${selectedImage.name}`;
+        window.location.href = `https://cloudflare-ipfs.com/ipfs/${result.cid}?filename=${selectedImage.name}`;
       }
     };
   };

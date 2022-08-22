@@ -59,7 +59,7 @@ const Index = () => {
                 <GltfModel
                   scale="40"
                   modelPath={
-                    'https://ipfs.infura.io/ipfs/QmPxWzqHnNjYQZb4bcSgv4TsXS5gkLhfTXSWoC6eYirxN2?filename=Donut.glb'
+                    'https://cloudflare-ipfs.com/ipfs/QmPxWzqHnNjYQZb4bcSgv4TsXS5gkLhfTXSWoC6eYirxN2?filename=Donut.glb'
                   }
                   position={[0, 0, 0]}
                 />
